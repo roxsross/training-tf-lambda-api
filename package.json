@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-aws-lambda-s3",
+  "version": "1.0.0",
+  "description": "nodejs on aws lambda with terraform, to handle uploads to s3. by @roxsross",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "pack": "zip -jr function.zip src/index.js",
+    "aws:destroy": "cd terraform && terraform destroy -auto-approve && rm ../function.zip",
+    "aws:plan": "npm run pack && cd terraform && terraform plan",
+    "aws:deploy": "npm run pack && cd terraform && terraform apply -auto-approve"
+  },
+  "author": "Rossana Suarez @roxsross",
+  "license": "MIT"
+}
