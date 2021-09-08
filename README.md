@@ -39,3 +39,9 @@ npm run aws:plan
 ```bash
 npm run aws:deploy
 ```
+
+### Destroy de la infra
+
+```bash
+npm run aws:destroy
+```
