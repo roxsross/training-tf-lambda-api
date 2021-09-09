@@ -1,0 +1,6 @@
+app_id         = "demo-serverless"
+app_env        = "dev"
+region         = "us-east-1"
+aws_profile    = "roxsross"
+repo_url       = "https://github.com/roxsross/training-tf-lambda-api"
+lambda_package = "../function.zip"

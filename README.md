@@ -28,6 +28,12 @@ npm run pack
 
 Para el despliegue de la lambda y sus componentes adicionales se usa `terraform`, el código IAC esta almacenado en el directorio `terraform` que esta ubicado en la raíz del proyecto
 
+### Init ambiente dev
+
+```bash
+npm run aws:init
+```
+
 ### Plan de despliegue en ambiente dev
 
 ```bash

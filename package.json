@@ -7,9 +7,10 @@
   "devDependencies": {},
   "scripts": {
     "pack": "zip -jr function.zip src/index.js",
+    "aws:init": "cd terraform && terraform init",
     "aws:destroy": "cd terraform && terraform destroy -auto-approve && rm ../function.zip",
-    "aws:plan": "npm run pack && cd terraform && terraform plan",
-    "aws:deploy": "npm run pack && cd terraform && terraform apply -auto-approve"
+    "aws:plan": "npm run pack && cd terraform && terraform plan -var-file=tfvars/dev.tfvars",
+    "aws:deploy": "npm run pack && cd terraform && terraform apply -var-file=tfvars/dev.tfvars -auto-approve"
   },
   "author": "Rossana Suarez @roxsross",
   "license": "MIT"
